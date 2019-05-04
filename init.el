@@ -72,7 +72,6 @@
   :diminish subword-mode
   :config
   (setq nrepl-log-messages t                  
-        cider-repl-display-in-current-window t
         cider-repl-use-clojure-font-lock t    
         cider-prompt-save-file-on-load 'always-save
         cider-font-lock-dynamically '(macro core function var)
