@@ -110,6 +110,7 @@
 
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq backup-by-copying t)
+(setq scroll-step 1)
 
 (require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
 ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
