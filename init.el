@@ -13,6 +13,8 @@
 (package-initialize)
 
 (eval-when-compile (require 'use-package))
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
 (menu-bar-mode -1)
 (tool-bar-mode -1)
