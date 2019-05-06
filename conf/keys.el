@@ -28,3 +28,4 @@
 (define-key evil-normal-state-map (kbd "SPC f t") 'neotree-toggle)
 (define-key evil-normal-state-map (kbd "SPC f f") 'counsel-fzf)
 (define-key evil-normal-state-map (kbd "SPC f p f") 'counsel-projectile-find-file)
+(define-key evil-normal-state-map (kbd "SPC f o") 'counsel-find-file)
