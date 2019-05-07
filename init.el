@@ -56,6 +56,7 @@
 
 (use-package rainbow-delimiters)
 (use-package smartparens)
+(use-package evil-smartparens)
 (use-package yasnippet)
 (use-package clj-refactor)
 
@@ -64,8 +65,11 @@
   :mode (("\\.clj\\'" . clojure-mode)
          ("\\.edn\\'" . clojure-mode))
   :init
+  (require 'conf-clojure)
   (add-hook 'clojure-mode-hook #'yas-minor-mode)         
-  (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode))
+  (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+  (add-hook 'clojure-mode-hook #'smartparens-mode)
+  (add-hook 'clojure-mode-hook #'evil-smartparens-mode))
 
 (use-package cider
   :ensure t
