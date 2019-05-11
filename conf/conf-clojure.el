@@ -12,3 +12,4 @@
 (define-key evil-normal-state-map (kbd "SPC m t n") 'cider-test-run-ns-tests)
 (define-key evil-normal-state-map (kbd "SPC m t s") 'cider-test-show-report)
 (define-key evil-normal-state-map (kbd "SPC m d") 'cider-doc)
+(define-key evil-normal-state-map (kbd "SPC >") 'sp-forward-slurp-sexp)
