@@ -85,6 +85,11 @@
         cider-overlays-use-font-lock t)         
   (cider-repl-toggle-pretty-printing))
 
+(use-package intero)
+
+(use-package haskell-mode
+  :init (add-hook 'haskell-mode-hook #'intero-mode))
+
 (use-package evil
   :config
   (evil-mode 1)
