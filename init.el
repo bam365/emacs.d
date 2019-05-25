@@ -88,7 +88,10 @@
 (use-package intero)
 
 (use-package haskell-mode
-  :init (add-hook 'haskell-mode-hook #'intero-mode))
+  :init
+  (require 'conf-haskell)
+  (add-hook 'haskell-mode-hook #'intero-mode)
+  (add-hook 'haskell-mode-hook 'haskell-setup))
 
 (use-package evil
   :config
