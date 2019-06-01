@@ -36,6 +36,15 @@
 
 (use-package neotree)
 
+(use-package company
+  :ensure t
+  :diminish ""
+  :init
+  ;; (add-hook 'prog-mode-hook 'company-mode)
+  ;; (add-hook 'comint-mode-hook 'company-mode)
+  :config
+  (require 'conf-company))
+
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
@@ -108,9 +117,10 @@
    (quote
     ("1436d643b98844555d56c59c74004eb158dc85fc55d2e7205f8d9b8c860e177f" "8a6f10b3269c42c351776ee32c7ee755472dee4ecdf2177dcbf64d5e02d1ab64" "ed2b5df51c3e1f99207074f8a80beeb61757ab18970e43d57dec34fe21af2433" "d411730c6ed8440b4a2b92948d997c4b71332acf9bb13b31e9445da16445fe43" default)))
  '(inhibit-startup-screen t)
+ '(merlin-error-after-save nil)
  '(package-selected-packages
    (quote
-    (smartparens rainbow-delimiters elscreen persp-mode elscreen-fr counsel-projectile counsel markdown-mode flycheck-ocaml flycheck tuareg use-package gruvbox-theme ivy evil))))
+    (0blayout utop smartparens rainbow-delimiters elscreen persp-mode elscreen-fr counsel-projectile counsel markdown-mode flycheck-ocaml flycheck tuareg use-package gruvbox-theme ivy evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
