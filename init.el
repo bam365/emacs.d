@@ -61,6 +61,8 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+(use-package yaml-mode)
+
 (use-package tuareg
   :config
   (require 'conf-ocaml)

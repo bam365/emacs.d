@@ -5,6 +5,9 @@
 (define-key evil-visual-state-map (kbd "SPC m r s") 'intero-repl-eval-region)
 (define-key evil-normal-state-map (kbd "SPC m r l") 'intero-repl-load)
 (define-key evil-normal-state-map (kbd "SPC m a s") 'intero-apply-suggestions)
+(define-key evil-normal-state-map (kbd "SPC m i d") 'hindent-reformat-decl)
+(define-key evil-normal-state-map (kbd "SPC m i r") 'hindent-reformat-region)
+(define-key evil-normal-state-map (kbd "SPC m i b") 'hindent-reformat-buffer)
 (define-key evil-insert-state-map (kbd "C-SPC") 'intero-company)
 
 (defun haskell-setup ()
