@@ -25,6 +25,14 @@
 (setq tab-width 4)
 (defvaralias 'c-basic-offset 'tab-width)
 (setq indent-line-function 'insert-tab)
+(global-linum-mode t)
+(column-number-mode t)
+(setq-default indent-tabs-mode nil)
+(setq-default show-trailing-whitespace t)
+
+(add-hook 'find-file-hook
+          (lambda ()
+            (setq default-directory command-line-default-directory)))
 
 (use-package ivy
   :config
@@ -95,12 +103,15 @@
   (cider-repl-toggle-pretty-printing))
 
 (use-package intero)
+(use-package hindent)
 
 (use-package haskell-mode
   :init
   (require 'conf-haskell)
   (add-hook 'haskell-mode-hook #'intero-mode)
+  (add-hook 'haskell-mode-hook #'hindent-mode)
   (add-hook 'haskell-mode-hook 'haskell-setup))
+
 
 (use-package evil
   :config
@@ -117,7 +128,6 @@
    (quote
     ("1436d643b98844555d56c59c74004eb158dc85fc55d2e7205f8d9b8c860e177f" "8a6f10b3269c42c351776ee32c7ee755472dee4ecdf2177dcbf64d5e02d1ab64" "ed2b5df51c3e1f99207074f8a80beeb61757ab18970e43d57dec34fe21af2433" "d411730c6ed8440b4a2b92948d997c4b71332acf9bb13b31e9445da16445fe43" default)))
  '(inhibit-startup-screen t)
- '(merlin-error-after-save nil)
  '(package-selected-packages
    (quote
     (0blayout utop smartparens rainbow-delimiters elscreen persp-mode elscreen-fr counsel-projectile counsel markdown-mode flycheck-ocaml flycheck tuareg use-package gruvbox-theme ivy evil))))

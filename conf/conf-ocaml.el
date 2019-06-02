@@ -11,15 +11,12 @@
                 ("\\.topml$" . tuareg-mode))
               auto-mode-alist))
 
-(setq merlin-error-after-save t)
 
 (autoload 'utop-minor-mode "utop" "Minor mode for utop" t)
 (add-hook 'tuareg-mode-hook 'utop-minor-mode)
 (add-hook 'tuareg-mode-hook 'merlin-mode)
 (setq merlin-use-auto-complete-mode t)
-(setq merlin-error-after-save nil)
 (setq utop-command "opam config exec -- utop -emacs")
-
 
 (add-hook 'tuareg-mode-hook 'set-ocaml-keys)
 
