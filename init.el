@@ -142,7 +142,7 @@
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 (use-package gruvbox-theme
   :config
-  (load-theme 'gruvbox))
+  (load-theme 'gruvbox t))
 
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq backup-by-copying t)
